@@ -1,7 +1,9 @@
+// Fecha y hora
+
 tday = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves",
  "Viernes", "Sábado");
-tmonth = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
- "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+tmonth = new Array("enero", "febrero", "marzo", "abril", "mayo", "junio",
+ "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");
 
 function GetClock() {
     var d = new Date();
@@ -29,6 +31,21 @@ window.onload = function () {
     setInterval(GetClock, 1000);
 }
 
+// Carga categorias
+
+$.getJSON("data/categorias.json", function (datos) {
+    for (let i = 0; i < datos.length; i++) {
+
+        $("#categorias").append(
+            `<ul>
+                <li>
+                    <mark class="${datos[i].nombre}">${datos[i].nombre}</mark>
+                </li>
+            </ul>`
+        )
+
+    }
+})
 
 // Carga noticias
 
@@ -37,9 +54,8 @@ $.getJSON("data/noticias.json", function (datos) {
 
         $("#noticias").append(
             `<ul>
-                <li>${datos[i].logo}</li>
-                <li>${datos[i].nombre}</li>
-                <li>${datos[i].url}</li>>
+                <li><img src='${datos[i].logo}'>\n
+                <a href="${datos[i].url}">${datos[i].nombre}</a></li>
             </ul>`
         )
 
