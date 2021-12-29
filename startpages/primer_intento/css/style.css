@@ -9,7 +9,9 @@ ul {
     padding: 0;
 }
 li{
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 body {
     height: 90vh;
@@ -39,37 +41,76 @@ body {
     justify-content: center;
 }
 
-#noticias {
+#noticias, #streaming, #cursos, #trabajo, #recursos{
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
-    padding-left: 150px;
+    padding: 50px 0px 50px 50px;
+    margin: 5% 20%;
+    border-radius: 15px;
+    background-color: #eff0f1;
 }
 
-img{
-    width: 25px;
-    height: 25px;
+#noticias {
+    border: 5px solid #b0f2c2;
 }
 
-mark {
+#streaming {
+    border: 5px solid #fdfd96;
+}
+
+#cursos {
+    border: 5px solid #b0c2f2;
+}
+
+#trabajo {
+    border: 5px solid #b2e2f2;
+}
+
+#recursos {
+    border: 5px solid #ffda9e;
+}
+
+input[type=button] {
     margin: 10px;
-    padding: 5px;
+    padding: 5px 15px 5px 15px;
+    border: none;
     border-radius: 15px;
     cursor: pointer;
 }
 
 .cursos{
-    background-color: #8000806F;
+    background-color: #b0c2f2;
 }
 
 .noticias{
-    background-color: #4ee27a6f;
+    background-color: #b0f2c2;
+}
+
+.streaming{
+    background-color: #fdfd96;
 }
 
 .trabajo{
-    background-color: #16b2f0ef;
+    background-color: #b2e2f2;
 }
 
 .recursos{
-    background-color: #f07816ef;
+    background-color: #ffda9e;
+}
+
+#timedate{
+    font-size: 36px;
+}
+
+.separacion{
+    height: 30px;
+    line-height: 30px;
+}
+
+.enlace{
+    margin-left: 5px;
+}
+
+.enlace:hover{
+    margin-left: 10px;
 }

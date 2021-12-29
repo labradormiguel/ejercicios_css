@@ -1,27 +1,32 @@
 [
     {
-        "logo": "logo.png",
-        "nombre": "Website Title",
-        "url": "https://www.google.com"
+        "logo": "./img/reddit.png",
+        "nombre": "Reddit",
+        "url": "https://www.reddit.com"
     },
     {
-        "logo": "logo.png",
-        "nombre": "Website Title",
-        "url": "https://www.google.com"
+        "logo": "./img/twitter.png",
+        "nombre": "Twitter",
+        "url": "https://www.twitter.com"
     },
     {
-        "logo": "logo.png",
-        "nombre": "Website Title",
-        "url": "https://www.google.com"
+        "logo": "./img/gmail.png",
+        "nombre": "Gmail",
+        "url": "https://www.gmail.com"
     },
     {
-        "logo": "logo.png",
-        "nombre": "Website Title",
-        "url": "https://www.google.com"
+        "logo": "./img/protonmail.png",
+        "nombre": "ProtonMail",
+        "url": "https://www.protonmail.com"
     },
     {
-        "logo": "logo.png",
-        "nombre": "Website Title",
-        "url": "https://www.google.com"
+        "logo": "./img/youtube.png",
+        "nombre": "YouTube",
+        "url": "https://www.youtube.com"
+    },
+    {
+        "logo": "./img/xataka.png",
+        "nombre": "Xataka",
+        "url": "https://www.xataka.com"
     }
 ]
