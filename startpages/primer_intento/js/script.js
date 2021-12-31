@@ -1,36 +1,3 @@
-// Fecha y hora
-
-tday = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves",
-    "Viernes", "Sábado");
-tmonth = new Array("enero", "febrero", "marzo", "abril", "mayo", "junio",
-    "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");
-
-function GetClock() {
-    var d = new Date();
-    var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(),
-        nyear = d.getYear(), nhour = d.getHours(), nmin = d.getMinutes(),
-        nsec = d.getSeconds(), ap;
-
-    /*     if (nhour == 0) { ap = " AM"; nhour = 12; }
-        else if (nhour < 12) { ap = " AM"; }
-        else if (nhour == 12) { ap = " PM"; }
-        else if (nhour > 12) { ap = " PM"; nhour -= 12; } */
-
-    if (nyear < 1000) nyear += 1900;
-    if (nmin <= 9) nmin = "0" + nmin;
-    if (nsec <= 9) nsec = "0" + nsec;
-
-    document.getElementById('timedate').innerHTML =
-        "" + nhour + ":" + nmin + ":" + nsec + "<br/>" + tday[nday] + ", "
-        + ndate + " de " + tmonth[nmonth] + " de " + nyear + " ";
-    // añadir + ap para modo 12H
-}
-
-window.onload = function () {
-    GetClock();
-    setInterval(GetClock, 1000);
-}
-
 // Carga categorias
 
 $(document).ready(function () {
@@ -149,7 +116,7 @@ $(document).ready(function () {
 
         }
     });
-    
+
     $("body").on("click", ".noticias", function () {
 
         $("#streaming").hide();
@@ -177,7 +144,7 @@ $(document).ready(function () {
         $("#cursos").show();
         $("#trabajo").hide();
         $("#recursos").hide();
-        
+
     })
 
     $("body").on("click", ".trabajo", function () {
@@ -187,7 +154,7 @@ $(document).ready(function () {
         $("#cursos").hide();
         $("#trabajo").show();
         $("#recursos").hide();
-        
+
     })
 
     $("body").on("click", ".recursos", function () {
@@ -197,7 +164,40 @@ $(document).ready(function () {
         $("#cursos").hide();
         $("#trabajo").hide();
         $("#recursos").show();
-        
+
     })
 
 });
+
+// Fecha y hora
+
+tday = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves",
+    "Viernes", "Sábado");
+tmonth = new Array("enero", "febrero", "marzo", "abril", "mayo", "junio",
+    "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");
+
+function GetClock() {
+    var d = new Date();
+    var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(),
+        nyear = d.getYear(), nhour = d.getHours(), nmin = d.getMinutes(),
+        nsec = d.getSeconds(), ap;
+
+    /*     if (nhour == 0) { ap = " AM"; nhour = 12; }
+        else if (nhour < 12) { ap = " AM"; }
+        else if (nhour == 12) { ap = " PM"; }
+        else if (nhour > 12) { ap = " PM"; nhour -= 12; } */
+
+    if (nyear < 1000) nyear += 1900;
+    if (nmin <= 9) nmin = "0" + nmin;
+    if (nsec <= 9) nsec = "0" + nsec;
+
+    document.getElementById('timedate').innerHTML =
+        "" + nhour + ":" + nmin + ":" + nsec + "<br/>" + tday[nday] + ", "
+        + ndate + " de " + tmonth[nmonth] + " de " + nyear + " ";
+    // añadir + ap para modo 12H
+}
+
+window.onload = function () {
+    GetClock();
+    setInterval(GetClock, 1000);
+}

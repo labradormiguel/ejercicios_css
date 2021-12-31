@@ -1,27 +1,27 @@
 [
     {
         "logo": "logo.png",
-        "nombre": "Website Title",
+        "nombre": "Netflix",
         "url": "https://www.google.com"
     },
     {
         "logo": "logo.png",
-        "nombre": "Website Title",
+        "nombre": "Disney+",
         "url": "https://www.google.com"
     },
     {
         "logo": "logo.png",
-        "nombre": "Website Title",
+        "nombre": "Prime Video",
         "url": "https://www.google.com"
     },
     {
         "logo": "logo.png",
-        "nombre": "Website Title",
+        "nombre": "Pluto TV",
         "url": "https://www.google.com"
     },
     {
         "logo": "logo.png",
-        "nombre": "Website Title",
+        "nombre": "YouTube Music",
         "url": "https://www.google.com"
     }
 ]
